@@ -11,19 +11,16 @@ const Sitelayout = () => {
 						to="/"
 					>
 						Anasayfa
-					</NavLink>
-
+					</NavLink>{' '}
 					<NavLink
 						className={({ isActive }) => (isActive ? 'bg-green-500 p-5' : '')}
 						to="/about"
 					>
 						Hakkımızda
 					</NavLink>
-
 					<Link className="p-2 text-blue-900 hover:text-blue-500" to="/admin">
 						Admin
 					</Link>
-
 					<Link
 						className="p-2 text-blue-900 hover:text-blue-500"
 						to="/admin/users"

@@ -8,6 +8,7 @@ import Sitelayout from './layouts/site.layout';
 import Adminlayout from './layouts/admin.layout';
 import HomePage from './pages/site/home.page';
 import AboutPage from './pages/site/about.page';
+import LoginPage from './pages/site/login.page';
 
 const router = createBrowserRouter([
 	{
@@ -22,6 +23,11 @@ const router = createBrowserRouter([
 			{
 				path: 'about',
 				Component: AboutPage,
+				// element: <>About Page</>,
+			},
+			{
+				path: 'login',
+				Component: LoginPage,
 				// element: <>About Page</>,
 			},
 		],
