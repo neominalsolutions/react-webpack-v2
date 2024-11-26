@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 
-function UserDetail() {
+function UserDetailPage() {
 	// /:id/:name böyle dinamik route oluştururuz.
 	const params = useParams();
 
@@ -14,4 +14,4 @@ function UserDetail() {
 	);
 }
 
-export default UserDetail;
+export default UserDetailPage;

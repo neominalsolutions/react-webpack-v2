@@ -12,9 +12,12 @@ function Adminlayout() {
 				<nav>
 					<p>Id: {id}</p>
 					<Link className="text-blue-600" to={`/admin/users/${id}/ali`}>
-						User Detail
+						UseParams
 					</Link>
 					<br></br>
+					<Link className="text-blue-600" to={`/admin/users?code=1234&size=md`}>
+						UseSearchParams
+					</Link>
 				</nav>
 				<div>
 					<button

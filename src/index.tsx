@@ -9,7 +9,9 @@ import Adminlayout from './layouts/admin.layout';
 import HomePage from './pages/site/home.page';
 import AboutPage from './pages/site/about.page';
 import LoginPage from './pages/site/login.page';
-import UserDetail from './pages/admin/user.detail';
+import UserDetailPage from './pages/admin/user.detail.page';
+import UserPage from './pages/admin/user.page';
+import UsersPage from './pages/admin/user.page';
 
 const router = createBrowserRouter([
 	{
@@ -39,11 +41,11 @@ const router = createBrowserRouter([
 		children: [
 			{
 				path: 'users', // /admin/users
-				element: <>Admin Users</>,
+				Component: UsersPage,
 			},
 			{
 				path: 'users/:id/:name', // /admin/users/1
-				Component: UserDetail,
+				Component: UserDetailPage,
 			},
 		],
 	},
