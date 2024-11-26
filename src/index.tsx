@@ -9,6 +9,7 @@ import Adminlayout from './layouts/admin.layout';
 import HomePage from './pages/site/home.page';
 import AboutPage from './pages/site/about.page';
 import LoginPage from './pages/site/login.page';
+import UserDetail from './pages/admin/user.detail';
 
 const router = createBrowserRouter([
 	{
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
 			{
 				path: 'users', // /admin/users
 				element: <>Admin Users</>,
+			},
+			{
+				path: 'users/:id/:name', // /admin/users/1
+				Component: UserDetail,
 			},
 		],
 	},
