@@ -5,7 +5,8 @@ import img from './assets/img/logo.png';
 import * as styles from './index.module.scss';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Memoisationlayout from './layouts/memoisation.layout';
-import ReactMemoSample from './pages/memoisation/react.memo.sample';
+import ReactMemoPageSample from './pages/memoisation/react.memo.sample.page';
+import UseRefPageSample from './pages/memoisation/useref.sample.page';
 
 const Sitelayout = lazy(() => import('./layouts/site.layout'));
 const Adminlayout = lazy(() => import('./layouts/admin.layout'));
@@ -56,8 +57,12 @@ const router = createBrowserRouter([
 		Component: Memoisationlayout,
 		children: [
 			{
-				path: '',
-				Component: ReactMemoSample,
+				path: 'memo',
+				Component: ReactMemoPageSample,
+			},
+			{
+				path: 'useref',
+				Component: UseRefPageSample,
 			},
 		],
 	},

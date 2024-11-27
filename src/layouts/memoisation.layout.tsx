@@ -5,8 +5,11 @@ function Memoisationlayout() {
 	return (
 		<>
 			<nav>
-				<Link className="text-blue-500" to="/memoisation">
+				<Link className="text-blue-500" to="/memoisation/memo">
 					React Memo
+				</Link>{' '}
+				<Link className="text-blue-500" to="/memoisation/useref">
+					Use Ref Hook
 				</Link>{' '}
 			</nav>
 

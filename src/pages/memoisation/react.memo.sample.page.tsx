@@ -61,7 +61,7 @@ const ChildComponent = memo(({ title, onLoad }: ChildComponentProps) => {
 	return <>{title}</>;
 });
 
-function ReactMemoSample() {
+function ReactMemoPageSample() {
 	return (
 		<>
 			<ParentComponent />
@@ -69,4 +69,4 @@ function ReactMemoSample() {
 	);
 }
 
-export default ReactMemoSample;
+export default ReactMemoPageSample;
