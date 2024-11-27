@@ -27,6 +27,12 @@ const Sitelayout = () => {
 					>
 						Admin Users
 					</Link>
+					<Link
+						className="p-2 text-blue-900 hover:text-blue-500"
+						to="/custom-hook"
+					>
+						Custom Hook
+					</Link>
 				</nav>
 			</header>
 
