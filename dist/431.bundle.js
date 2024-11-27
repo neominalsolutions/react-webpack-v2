@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkreact_webpack=self.webpackChunkreact_webpack||[]).push([[431],{431:(e,a,t)=>{t.r(a),t.d(a,{default:()=>l});var r=t(540),c=t(767);const l=function(){var e=(0,c.g)();return console.log("params",e),r.createElement(r.Fragment,null,r.createElement("p",null,"User Detail Page"))}}}]);

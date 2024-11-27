@@ -1,17 +1,17 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.scss';
 import img from './assets/img/logo.png';
 import * as styles from './index.module.scss';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Sitelayout from './layouts/site.layout';
-import Adminlayout from './layouts/admin.layout';
-import HomePage from './pages/site/home.page';
-import AboutPage from './pages/site/about.page';
-import LoginPage from './pages/site/login.page';
-import UserDetailPage from './pages/admin/user.detail.page';
-import UserPage from './pages/admin/user.page';
-import UsersPage from './pages/admin/user.page';
+
+const Sitelayout = lazy(() => import('./layouts/site.layout'));
+const Adminlayout = lazy(() => import('./layouts/admin.layout'));
+const HomePage = lazy(() => import('./pages/site/home.page'));
+const AboutPage = lazy(() => import('./pages/site/about.page'));
+const LoginPage = lazy(() => import('./pages/site/login.page'));
+const UserDetailPage = lazy(() => import('./pages/admin/user.detail.page'));
+const UsersPage = lazy(() => import('./pages/admin/user.page'));
 
 const router = createBrowserRouter([
 	{
@@ -59,4 +59,14 @@ const root = ReactDOM.createRoot(
 	document.getElementById('root') as HTMLElement
 );
 
-root.render(<RouterProvider router={router}></RouterProvider>);
+// asenkron bir component yüklemesi yapıldığı için yükleme yapılana kadar fallback compopnent gösterilir.
+
+const FallBackComponent: React.FC = () => {
+	return <>... Loading</>;
+};
+
+root.render(
+	<Suspense fallback={<FallBackComponent />}>
+		<RouterProvider router={router}></RouterProvider>
+	</Suspense>
+);

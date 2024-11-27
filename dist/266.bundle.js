@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkreact_webpack=self.webpackChunkreact_webpack||[]).push([[266],{266:(e,a,t)=>{t.r(a),t.d(a,{default:()=>n});var c=t(540);const n=function(){return c.createElement(c.Fragment,null,c.createElement("p",null,"Hakkımızda"))}}}]);
