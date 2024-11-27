@@ -1,4 +1,4 @@
-import React, { lazy } from 'react';
+import React, { lazy, Suspense } from 'react';
 import { useSearchParams } from 'react-router-dom';
 
 const LazyComponentDemo = lazy(() => import('../../components/lazy.component'));
@@ -11,7 +11,9 @@ function UsersPage() {
 
 	return (
 		<>
-			<LazyComponentDemo />
+			<Suspense fallback={<></>}>
+				<LazyComponentDemo />
+			</Suspense>
 		</>
 	);
 }
