@@ -7,6 +7,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Memoisationlayout from './layouts/memoisation.layout';
 import ReactMemoPageSample from './pages/memoisation/react.memo.sample.page';
 import UseRefPageSample from './pages/memoisation/useref.sample.page';
+import UseImperativeHandlerSamplePage from './pages/memoisation/use.imperative.handler.sample.page';
 
 const Sitelayout = lazy(() => import('./layouts/site.layout'));
 const Adminlayout = lazy(() => import('./layouts/admin.layout'));
@@ -63,6 +64,10 @@ const router = createBrowserRouter([
 			{
 				path: 'useref',
 				Component: UseRefPageSample,
+			},
+			{
+				path: 'useImperativeHandle',
+				Component: UseImperativeHandlerSamplePage,
 			},
 		],
 	},

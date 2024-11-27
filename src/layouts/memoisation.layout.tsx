@@ -11,6 +11,9 @@ function Memoisationlayout() {
 				<Link className="text-blue-500" to="/memoisation/useref">
 					Use Ref Hook
 				</Link>{' '}
+				<Link className="text-blue-500" to="/memoisation/useImperativeHandle">
+					useImperativeHandle Hook
+				</Link>{' '}
 			</nav>
 
 			<main className="p-5">
