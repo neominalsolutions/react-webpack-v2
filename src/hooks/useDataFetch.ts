@@ -14,7 +14,6 @@ export const useDataFetch = (endpoint: string) => {
 	});
 
 	useEffect(() => {
-		console.log('enpoint değişti');
 		setState({ ...state, loading: true });
 		fetch(endpoint)
 			.then((res) => res.json())

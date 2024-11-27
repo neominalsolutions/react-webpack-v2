@@ -9,6 +9,7 @@ import ReactMemoPageSample from './pages/memoisation/react.memo.sample.page';
 import UseRefPageSample from './pages/memoisation/useref.sample.page';
 import UseImperativeHandlerSamplePage from './pages/memoisation/use.imperative.handler.sample.page';
 import CustomHookSamplePage from './pages/site/custom.hook.sample.page';
+import DebouncingSamplePage from './pages/site/deboucing.sample.page';
 
 const Sitelayout = lazy(() => import('./layouts/site.layout'));
 const Adminlayout = lazy(() => import('./layouts/admin.layout'));
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
 			{
 				path: 'custom-hook',
 				Component: CustomHookSamplePage,
+			},
+			{
+				path: 'debouncing',
+				Component: DebouncingSamplePage,
 			},
 		],
 	},

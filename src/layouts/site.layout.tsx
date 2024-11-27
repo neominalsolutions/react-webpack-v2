@@ -33,6 +33,12 @@ const Sitelayout = () => {
 					>
 						Custom Hook
 					</Link>
+					<Link
+						className="p-2 text-blue-900 hover:text-blue-500"
+						to="/debouncing"
+					>
+						Server Side Search
+					</Link>
 				</nav>
 			</header>
 
